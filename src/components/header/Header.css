@@ -1,0 +1,130 @@
+.header {
+    background-color: bisque;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    position: relative; /*ovo je zbog search bara dole jer ceo header mora imati position relative inace ce search bar biti skroz pri dnu starne a to ne zelimo */
+    height: 300px;
+}
+
+.headerContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 100px 0px;
+}
+
+.headerContainer.listMode {
+    margin: 20px 0px 0px 0px;
+}
+
+.headerList {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.headerListItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.headerListItem.active {
+    border: 2px solid yellowgreen;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.headerDescription {
+    margin: 24px 0px;
+}
+
+.headerBtn {
+    background-color: azure;
+    color: black;
+    font-weight: 500;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+
+.headerSearch {
+    height: 30px;
+    background-color: lavenderblush;
+    border: 3px solid yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;  /* ovim centriram ceo search bar jer je ukupan heaight ovog okolo 50- height mi je 30 i padding je po 10 svuda i to je 50 a centrirano je na pola tj 25 i zato od donjeg dela oduzimam 25 */
+    width: 100%;
+    max-width: 1024px;
+}
+
+.headerIcon {
+    color: lightcoral;
+}
+
+.headerSearchItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerSearchInput {
+    outline: none;
+    border: none;
+}
+
+.headerSearchText {
+    color: lightgray;
+    cursor: pointer;
+}
+
+.date {
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+
+.options {
+    position: absolute;
+    top: 50px;
+    background-color: bisque;
+    color: blue;
+    border-radius: 5px;
+    --webkit-box-shadow:0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.optionItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 1px;
+}
+
+.optionCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: blue;
+}
+
+.optionCounterButton {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    color: blue;
+    background-color: azure;
+}
+
+.optionCounterButton:disabled {
+    cursor: not-allowed;
+}
